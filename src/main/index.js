@@ -10,28 +10,12 @@ function createWindow() {
     width: 900,
     height: 670,
     show: false,
-    icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-youtube-48.png'),
-    icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-google-48.png'),
-    icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-twitter-48.png'),
-    icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-linkedin-48.png'),
-    icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-facebook-48.png'),
-    icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-instagram-48.png'),
-    icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-whatsapp-48.png'),
-    icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-gmail-48.png'),
-    icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-amazon-48.png'),
-    icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-flipkart-50.png'),
-    icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-spotify-48.png'),
-    icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-gaana-50.png'),
-    icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-google-drive-48.png'),
-    icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-google-meet-48.png'),
-    icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-google-maps-old-48.png'),
     icon: path.join(__dirname, 'src', 'renderer', 'src', 'assets', 'icons8-app-launcher-48.png'),
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: false,
-      contextIsolation: true
     }
   })
 

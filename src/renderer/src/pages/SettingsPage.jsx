@@ -11,7 +11,6 @@ const SettingsPage = () => {
         saveEditApplication,
         editApplicationHandler,
         handleEditInputChange,
-        handleFileChange,
         addApplicationWithInfo,
         handleApplication, } = useData();
 

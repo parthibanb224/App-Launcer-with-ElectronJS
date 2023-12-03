@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
-import ReactPlayer from 'react-player';
+import React from 'react';
 import { useData } from '../context/DataContext';
 
 const HomeScreen = () => {
     const { applications } = useData();
-    const [showWebApp, setShowWebApp] = useState(false)
 
     function openCoderJeet(url) {
         window.indexBridge.openCoderJeet(url);
@@ -35,25 +33,6 @@ const HomeScreen = () => {
                     ))}
                 </div>
             </div>
-
-            {showWebApp && (
-                <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center">
-                    <div className="bg-white p-4 rounded-lg">
-                        <button
-                            onClick={closeWebApp}
-                            className="absolute top-0 right-0 m-2 bg-red-500 text-white px-2 py-1 rounded"
-                        >
-                            Close
-                        </button>
-                        <ReactPlayer
-                            url="your_media_url_here"
-                            controls
-                            width="100%"
-                            height="100%"
-                        />
-                    </div>
-                </div>
-            )}
         </div>
     );
 };
